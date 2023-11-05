@@ -6,8 +6,10 @@ function TestPage() {
 	const [test, setTest] = useState(null);
 
 	const handleTestBackend = async () => {
+        console.log(process.env.REACT_APP_SERVER_URL);
+        
 		try {
-			const response = await axios.get('http://localhost:5005/api/test');
+			const response = await axios.get(`${process.env.REACT_APP_SERVER_URL || 'http://localhost:5000/api'}/test`);
 			setTest(response.data);
 		} catch (error) {
 			console.log(error);
