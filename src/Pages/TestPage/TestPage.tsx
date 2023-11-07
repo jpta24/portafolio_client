@@ -5,8 +5,6 @@ import axios from 'axios';
 function TestPage() {
 	const [test, setTest] = useState<String>("");
 
-	const API = window._env_?.API || "localhost:3000"
-
 	const var_env:String = process.env.REACT_APP_SERVER_URL || "not defined"
 
 	const handleTestBackend = async () => {
