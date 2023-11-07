@@ -1,14 +1,16 @@
 import { useState } from 'react';
 
-import axios from 'axios';
+import { API } from "../../config/constant";
+
+// import axios from 'axios';
 
 function TestPage() {
 	const [test, setTest] = useState<String>("");
 
-	const var_env:String = process.env.REACT_APP_SERVER_URL || "not defined"
+	// const var_env:String = process.env.REACT_APP_SERVER_URL || "not defined"
 
 	const handleTestBackend = async () => {
-        setTest(var_env)
+        setTest(API)
 		// try {
 		// 	const response = await axios.get(`${process.env.REACT_APP_SERVER_URL || 'http://localhost:5000/api'}/test`);
 		// 	setTest(response.data);

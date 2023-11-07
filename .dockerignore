@@ -13,6 +13,9 @@ out/
 .env.test.local
 .env.production.local
 
+# Environment js
+public/frontend.env.js
+
 # Security
 .git
 .gitignore
